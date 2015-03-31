@@ -34,7 +34,7 @@ class Color{
 			return o;
 		}
 
-		Color operator+(const Color& o){
+		Color operator+(const Color& o)const {
 			int rn = r+o.r;
 			int gn = g+o.g;
 			int bn = b+o.b;
@@ -47,7 +47,7 @@ class Color{
 			return Color(rn, gn, bn);
 		}
 
-		Color operator-(const Color& o){
+		Color operator-(const Color& o)const {
 			int rn = r-o.r;
 			int gn = g-o.g;
 			int bn = b-o.b;
@@ -60,15 +60,15 @@ class Color{
 			return Color(rn, gn, bn);
 		}
 		
-		inline bool operator==(const Color& o){
+		inline bool operator==(const Color& o)const {
 			return r==o.r and g==o.g and b==o.b;
 		}
 
-		inline bool operator!=(const Color& o){
+		inline bool operator!=(const Color& o)const {
 			return r!=o.r and g!=o.g and b!=o.b;
 		}
 
-		Color operator*(double s){
+		Color operator*(double s)const {
 			int rn = s*r;
 			int gn = s*g;
 			int bn = s*b;
@@ -87,14 +87,14 @@ class Color{
 			return Color(rn,gn,bn);
 		}
 
-		Color aGris(){
+		Color aGris()const{
 			unsigned char c;
 			c=(unsigned char)(0.30*r + 0.59*g + 0.11*b);
 			return Color(c,c,c);
 		}
 
 
-		unsigned char luz(){
+		unsigned char luz()const{
 			return (unsigned char)(0.30*r + 0.59*g + 0.11*b);
 		}
 	

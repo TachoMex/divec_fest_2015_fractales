@@ -14,6 +14,8 @@ const double limite = 2.0;
 
 complex<double> itera(complex<double> z, complex<double> c){
 	return z*z+c;
+	//return pow(z,6)+pow(c,-1);
+	//return cos(z)+pow(c,-1);
 }
 
 int main(){
